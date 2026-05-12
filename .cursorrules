@@ -1,0 +1,113 @@
+# Project Rules for Cursor AI
+
+## Project Context
+This is a Next.js project with modern Next.js features.
+This is NOT the old Next.js pattern.
+APIs, conventions, and file structure may be different from older versions.
+
+Before writing code, check the project structure and existing implementation.
+
+## Next.js Rules
+- Follow the current Next.js version used in this project.
+- Prefer App Router patterns if the project uses the `app` directory.
+- Do not use `pages` router patterns unless the project already uses `pages`.
+- Do not use `getServerSideProps`, `getStaticProps`, or `getInitialProps` inside App Router.
+- Use Server Components by default.
+- Use Client Components only when needed.
+- Add `"use client"` only for components that need browser APIs, hooks, or interactivity.
+- Do not pass functions from Server Components to Client Components unless properly handled with Server Actions.
+- Do not export `metadata` from Client Components.
+
+## React Rules
+
+- Use modern React patterns and best practices.
+- Avoid unnecessary `useMemo`, `useCallback`, and `memo`.
+- Keep components small, readable, reusable, and composable.
+- Keep state close to where it is used.
+- Avoid prop drilling when a cleaner pattern is available.
+- Prefer composition over deeply nested prop structures.
+- Use custom hooks for reusable logic when appropriate.
+- Use compound-component patterns when it improves flexibility and readability.
+- Avoid overly complex component abstractions.
+- Keep rendering logic simple and maintainable.
+- Prefer controlled components for form handling when applicable.
+- Follow the existing component architecture and naming conventions.
+
+## TypeScript Rules
+- Use TypeScript strictly.
+- Avoid `any`.
+- Prefer proper types and interfaces.
+- Reuse existing types from the project when available.
+- Keep type definitions clean and readable.
+
+## Styling Rules
+- Follow the existing styling approach in the project.
+- If Tailwind CSS is used, use Tailwind utility classes.
+- If MUI is used, follow the existing MUI theme and component patterns.
+- Do not mix styling approaches unnecessarily.
+
+## Code Quality
+
+- Follow existing folder structure and naming conventions.
+- Keep code simple, readable, and maintainable.
+- Avoid over-engineering.
+- Avoid duplicate logic.
+- Extract reusable logic only when it improves readability.
+- Use meaningful variable and function names.
+- Keep constants in a global/shared constants file when appropriate.
+- Use curly braces for better readability in conditional blocks.
+
+## Data Fetching
+
+- Use React Query as the primary data-fetching and server-state management solution.
+- Follow the existing React Query architecture and query patterns used in the project.
+- Use custom hooks for reusable query and mutation logic when appropriate.
+- Use meaningful and consistent query keys.
+- Keep API logic separated from UI components.
+- Handle loading, error, success, and empty states properly.
+- Use optimistic updates carefully when needed.
+- Configure stale time, cache time, and refetch behavior appropriately.
+- Avoid unnecessary refetching and duplicate API calls.
+- Use mutations for create, update, and delete operations.
+- Invalidate or update related queries properly after mutations.
+- Keep React Query logic clean, reusable, and maintainable.
+- Use pagination and infinite queries properly when needed.
+- Do not use Server Components for data fetching in this project.
+- Prefer client-side data fetching patterns consistent with the existing architecture.
+
+## Forms and Validation
+- Follow existing form patterns.
+- Use the existing validation library if one is already used.
+- Keep validation logic reusable and clear.
+
+## Error Handling
+- Handle errors properly.
+- Do not silently ignore errors.
+- Show user-friendly error messages.
+- Keep technical errors useful for debugging.
+
+## Performance
+- Avoid unnecessary client-side JavaScript.
+- Avoid unnecessary re-renders.
+- Use dynamic imports only when helpful.
+- Optimize images using Next.js image patterns when applicable.
+
+## Accessibility
+- Use semantic HTML.
+- Add proper labels for form fields.
+- Ensure buttons and links are accessible.
+- Avoid clickable divs unless required and accessible.
+
+## Git and PR Style
+- Make small, focused changes.
+- Do not modify unrelated files.
+- Keep comments clear and professional.
+- Explain complex logic with short comments only when needed.
+
+## Important
+Before generating or modifying code:
+1. Inspect the existing implementation.
+2. Follow the current project patterns.
+3. Do not assume old Next.js behavior.
+4. Do not introduce new libraries unless necessary.
+5. Keep the solution simple and production-friendly.
